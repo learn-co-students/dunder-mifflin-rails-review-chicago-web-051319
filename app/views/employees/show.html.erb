@@ -1,0 +1,9 @@
+<h1><%=@employee.full_name%></h1>
+<%=image_tag(@employee.img_url)%>
+<p>"<%=@employee.alias%>"</p>
+<p>Title: <%=@employee.title%></p>
+<p><%=@employee.office%> Office</p>
+<h2>Dog</h2>
+<p><%=link_to @dog.name, dog_path(@dog)%></p>
+<%=button_to "Edit This Employee", edit_employee_path(@employee), :method => "get"%>
+<%=button_to "Delete This Employee", employee_path, :method => "delete"%>
